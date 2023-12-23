@@ -7,6 +7,11 @@
   color: #0284d0;
 }
 
+/* active element */
+.active {
+  border-bottom: #28a745 2px solid;
+}
+
 /* button */
 .btn {
   cursor: pointer;

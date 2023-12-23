@@ -40,7 +40,7 @@ img {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space;
   background-color: #333;
   color: #fff;
   opacity: 0.8;
@@ -81,17 +81,25 @@ img {
 .hero .content {
   display: flex;
   /* will make child direct to coulmn, center position */
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: justify;
   /* full height like parent */
   height: 100%;
   padding: 0 20px;
 }
 
+.hero .content #icon-left {
+  padding: 100px;
+}
+
+.hero .content #title-right {
+  padding: 100px;
+}
+
 .hero .content h1 {
-  font-size: 55px;
+  font-size: 48px;
 }
 
 .hero .content p {
