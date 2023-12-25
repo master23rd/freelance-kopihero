@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&family=Open+Sans:wght@300;400&family=Roboto:wght@100&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,9 +8,9 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background: #fff;
-  color: #333;
+  font-family: 'DM Sans', sans-serif;
+  /* background: #fff; */
+  /* color: #333; */
   line-height: 1.6;
 }
 
@@ -41,7 +42,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space;
-  background-color: #333;
+  /* background-color: #333; */
+  background: linear-gradient(to right, #c9d2ef, #6680b3, #8196d9);
+  /* background: #8196d9; */
   color: #fff;
   opacity: 0.8;
   width: 100%;
@@ -55,10 +58,17 @@ img {
   color: #fff;
   padding: 10px 20px;
   margin: 0 5px;
+  font-weight: 200;
 }
 
 .navbar a:hover {
-  border-bottom: #28a745 2px solid;
+  border-bottom: #da544a 4px solid;
+}
+
+.navbar a.active {
+  font-weight: bold;
+  font-style: italic;
+  border-bottom: #da544a 4px solid;
 }
 
 .navbar ul {
@@ -67,11 +77,14 @@ img {
 
 .navbar .logo {
   font-weight: 400;
+  margin-right: 50px;
 }
 
 /* Header of Jumbotron */
 .hero {
-  background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+  /* background: url('../images/home/showcase.jpg') no-repeat center center/cover; */
+  background: linear-gradient(to right, #c9d2ef, #6680b3, #8196d9);
+  /* background: #8196d9; */
   height: 100vh;
   position: relative;
   color: #fff;
@@ -84,18 +97,10 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: justify;
+  text-align: left;
   /* full height like parent */
   height: 100%;
   padding: 0 20px;
-}
-
-.hero .content #icon-left {
-  padding: 100px;
-}
-
-.hero .content #title-right {
-  padding: 100px;
 }
 
 .hero .content h1 {
@@ -103,9 +108,9 @@ img {
 }
 
 .hero .content p {
-  font-size: 23px;
+  font-size: 20px;
   max-width: 600px;
-  margin: 20px 0 30px;
+  margin: 50px 0 30px;
 }
 
 /* psudeo class for Overlay */
@@ -117,7 +122,7 @@ img {
   width: 100%;
   height: 100%;
   /* background: red; */
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
 }
 
 .hero * {
@@ -129,14 +134,16 @@ img {
   padding: 30px;
 }
 
-.icons h3 {
+.icons h1 {
+  /* font-size: 48px; */
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .icons i {
-  background-color: #28a745;
-  color: #fff;
+  /* background-color: #28a745; */
+  color: #112556; /*#fff;*/
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 15px;
@@ -148,9 +155,51 @@ img {
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .flex-items > div {
   padding: 20px;
+}
+
+/* podcast */
+.podcast-content {
+  align-items: center;
+}
+/* programs */
+#programs {
+  padding: 50px;
+}
+
+.program-content {
+  border-radius: 50px;
+}
+
+.premium-btn a {
+  margin-right: 20px;
+}
+
+/* footer */
+#subscribe {
+  /* background: url('../images/home/showcase.jpg') no-repeat center center/cover; */
+  background: linear-gradient(to left, #c9d2ef, #6680b3, #8196d9);
+  /* background: #8196d9; */
+}
+
+.footer {
+  height: 50vh;
+  position: relative;
+  color: #fff;
+}
+
+.footer .content {
+  display: flex;
+  /* will make child direct to coulmn, center position */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  /* full height like parent */
+  height: 100%;
+  padding: 0 20px;
 }
