@@ -357,6 +357,32 @@ img {
     margin: 0 3px;
   }
 
+  .hero {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    color: #fff;
+  }
+
+  #subscribe {
+    height: 500px;
+  }
+
+  .subscribe .row,
+  .subscribe .column,
+  .subscribe .column-2 {
+    padding: 10px;
+  }
+
+  .subscribe img {
+    width: 100%;
+  }
+
+  .subscribe .column-1 {
+    display: none;
+  }
+
   .flex-items {
     flex-direction: column;
   }
