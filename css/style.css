@@ -169,7 +169,7 @@ img {
 
 .flex-items .card {
   background: #fff;
-  border: #f5f5f5 1px solid;
+  border: #d3d3d3 1px solid;
 }
 
 .flex-items .card img {
@@ -211,7 +211,7 @@ img {
 #subscribe {
   background: url('../images/asset/Subtract.png') no-repeat center left/auto,
     linear-gradient(to left, #8196d9, #6680b3, #5c78cf);
-  height: 119vh;
+  /* height: 119vh; */
   /* #c9d2ef, #6680b3, #8196d9 */
   /* background: url('../images/home/showcase.jpg') no-repeat center center/cover; */
   /* background: #8196d9; */
@@ -372,6 +372,7 @@ img {
 
 .footer .contact-us {
   margin-top: 20px;
+  justify-content: flex-end;
 }
 
 .footer .barcode {
@@ -412,17 +413,33 @@ img {
     margin: 0 3px;
   }
 
+  .subsection {
+    padding: 30px;
+  }
+
+  #program {
+    padding: 0;
+  }
+
   .hero,
   .hero.scorecard {
-    height: 150vh;
+    height: 190vh;
     display: flex;
     flex-direction: column;
     /* position: relative; */
     color: #fff;
+    padding-top: 80px;
   }
 
   #subscribe {
-    height: 500px;
+    height: 350px;
+  }
+
+  .subscribe img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    object-fit: cover;
   }
 
   .subscribe .row,
@@ -431,11 +448,7 @@ img {
     padding: 10px;
   }
 
-  .subscribe img {
-    width: 100%;
-  }
-
-  .subscribe .column-1 {
+  .subscribe .column .column-1-nopadding {
     display: none;
   }
 
@@ -455,5 +468,12 @@ img {
 
   .post h1 {
     width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .subscribe img {
+    width: 100%;
+    object-fit: cover;
   }
 }

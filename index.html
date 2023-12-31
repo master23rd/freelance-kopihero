@@ -17,32 +17,32 @@
     <title>Satusks.id</title>
   </head>
   <body id="home">
+    <!-- navbar / header secion (flex) -->
+    <div id="navbar" class="navbar top">
+      <!-- logo section (left side)-->
+      <h3 class="logo">
+        <span class="text-primary">
+          <!-- <i class="fas fa-book-open"></i> -->
+          <img
+            src="./images/asset/Putih - Submark 2.png"
+            alt=""
+            style="width: 40px"
+          />
+        </span>
+        satusks.id
+      </h3>
+      <!-- navigation (rightside)-->
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#testimony">Testimony</a></li>
+          <li><a href="#galery">Galery</a></li>
+          <li><a href="result.html">Scorecard</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
     <header class="hero">
-      <!-- navbar / header secion (flex) -->
-      <div id="navbar" class="navbar top">
-        <!-- logo section (left side)-->
-        <h3 class="logo">
-          <span class="text-primary">
-            <!-- <i class="fas fa-book-open"></i> -->
-            <img
-              src="./images/asset/Putih - Submark 2.png"
-              alt=""
-              style="width: 40px"
-            />
-          </span>
-          satusks.id
-        </h3>
-        <!-- navigation (rightside)-->
-        <nav>
-          <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#testimony">Testimony</a></li>
-            <li><a href="#galery">Galery</a></li>
-            <li><a href="result.html">Scorecard</a></li>
-            <li><a href="#">Kontak</a></li>
-          </ul>
-        </nav>
-      </div>
       <!-- jumbtron -->
       <!-- todo: media queries 768 -->
       <div class="content flex-columns">
@@ -445,9 +445,9 @@
         id="subscribe"
         class="subscribe flex-columns flex-reverse bg-primary"
       >
-        <div class="row">
+        <div class="row-nopadding">
           <div class="column">
-            <div class="column-1">
+            <div class="column-1-nopadding">
               <img src="images/asset/Group 783.png" alt="" />
             </div>
           </div>
@@ -455,7 +455,7 @@
             <div class="column-2">
               <img
                 src="images/asset/Group 782.png"
-                style="object-fit: none"
+                style="object-fit: contain"
                 alt=""
               />
             </div>
@@ -541,19 +541,20 @@
               <li><a href="#testimony"> +62 895 3391 41000</a></li>
             </ul>
           </nav>
-          <div class="row contact-us">
-            <div class="social">
-              <p>Contact Us</p>
-              <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-              <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-              <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-              <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-            </div>
-            <div class="barcode">
-              <img src="./images/asset/barcode.png" alt="" />
-            </div>
-          </div>
+
           <p>Copyright &copy; 2023 - Satusks.id</p>
+        </div>
+      </div>
+      <div class="row contact-us">
+        <div class="social">
+          <p>Contact Us</p>
+          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <div class="barcode">
+          <img src="./images/asset/barcode.png" alt="" />
         </div>
       </div>
     </footer>

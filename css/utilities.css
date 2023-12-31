@@ -83,16 +83,25 @@
 
 /* flex columns */
 /* flex for outline */
-.flex-columns.flex-reverse .row {
+.flex-columns.flex-reverse .row,
+.flex-columns.flex-reverse .row-nopadding {
   flex-direction: row-reverse;
 }
 
-.flex-columns .row {
+.flex-columns .row,
+.flex-columns .row-nopadding {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.flex-columns .row {
   padding: 30px;
+}
+
+.flex-columns .row-nopadding {
+  padding: 0;
 }
 
 .flex-columns .row .pad-0 {
@@ -114,6 +123,10 @@
 .flex-columns .column .column-1,
 .flex-columns .column .column-2 {
   height: 100%;
+}
+
+.flex-columns .column .column-1 {
+  padding: 0;
 }
 
 /* handle image size when normal view */
