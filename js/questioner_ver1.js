@@ -187,7 +187,7 @@
       />
     </form>
   </div>
-</div>`
+  </div>`
 
     introResult.classList.add('pre-animation')
     contactResult.classList.add('pre-animation')
@@ -243,6 +243,7 @@
     //return options
     $('#chartContainer').CanvasJSChart(options)
   }
+
   const questionareContainer = document.getElementById('questioner')
   const quizContainer = document.getElementById('quiz')
   const resultsContainer = document.getElementById('results')
