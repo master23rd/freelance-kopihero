@@ -17,39 +17,28 @@
     <title>Satusks.id</title>
   </head>
   <body id="home">
-    <div id="infobar" class="infobar">
-      <!-- navigation (rightside)-->
-      <nav>
-        <ul>
-          <li><a href="#home" class="active">About Us</a></li>
-          <li><a href="#testimony">Work at Kopi</a></li>
-        </ul>
-      </nav>
-    </div>
     <!-- navbar / header secion (flex) -->
     <div id="navbar" class="navbar top">
-      <!-- navigation (rightside)-->
-      <nav>
-        <ul>
-          <li><a href="#home" class="active">Menu</a></li>
-          <li><a href="#testimony">Find Us</a></li>
-        </ul>
-      </nav>
       <!-- logo section (left side)-->
       <h3 class="logo">
         <span class="text-primary">
           <!-- <i class="fas fa-book-open"></i> -->
           <img
-            src="./images/asset/kopi-nobg.png"
+            src="./images/asset/Putih - Submark 2.png"
             alt=""
-            style="width: 250px; padding-top: 80px"
+            style="width: 40px"
           />
         </span>
+        satusks.id
       </h3>
+      <!-- navigation (rightside)-->
       <nav>
         <ul>
-          <li><a href="#home">Offers</a></li>
-          <li><a href="#testimony">Contact</a></li>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#testimony">Testimony</a></li>
+          <li><a href="#galery">Galery</a></li>
+          <li><a href="scorecard.html">Scorecard</a></li>
+          <li><a href="#footer">Kontak</a></li>
         </ul>
       </nav>
     </div>
@@ -60,33 +49,22 @@
         <div class="row">
           <div class="column">
             <div class="column-1">
-              <img src="images/asset/bg1.png" alt="" />
+              <img
+                src="images/asset/Master_Ilustration_with shadow.png"
+                alt=""
+              />
             </div>
           </div>
           <div class="column">
             <div class="column-2 bg-outline">
-              <img
-                src="images/asset/kopi-icon.png"
-                alt=""
-                width="250px"
-                style="width: 50%; height: 20%"
-              />
+              <h1>Cari tahu kesiapanmu memilih jurusan & kampus yang tepat</h1>
               <p>
-                We’re thrilled to announce a delicious new collaboration with
-                Yakult, bringing you three brand-new, irresistible flavors that
-                will make your taste buds dance with joy! Meet our Berry Yakult,
-                Lychee Yakult, and Mango Yakult—each one is a party in a glass!
-                🎊
+                Scorecard ini menilai pengetahuan kamu mengenai minat & bakat,
+                kurikulum, prospek serta perkiraan biaya kuliah . Cukup dengan
+                90 detik waktu pengisian dan kamu akan tahu skornya.
               </p>
               <a href="scorecard.html" class="btn btn-primary">
-                <i class="fas fa-chevron"></i> Find Menu >
-              </a>
-              <a
-                href="scorecard.html"
-                class="btn btn-primary"
-                style="margin-top: 10px"
-              >
-                <i class="fas fa-chevron"></i> Find Us >
+                <i class="fas fa-chevron"></i> Isi Scorecard >
               </a>
             </div>
           </div>
@@ -589,7 +567,6 @@
     <!--   -->
     <script>
       const navbar = document.getElementById('navbar')
-      const infobar = document.getElementById('infobar')
       let scrolled = false
       window.onscroll = function () {
         if (window.pageYOffset > 100) {

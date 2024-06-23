@@ -45,30 +45,33 @@ img {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space;
+  justify-content: center;
   /* background-color: #333; */
-  background: linear-gradient(to right, #8196d9, #6680b3, #5c78cf);
+  /* background: linear-gradient(to right, #8196d9, #6680b3, #5c78cf); */
   /* background: #8196d9; */
-  color: #fff;
-  opacity: 0.8;
+  color: #23b4ff;
+  /* opacity: 0.8; */
   width: 100%;
   height: 70px;
   position: fixed;
   /* top: 0; */
   padding: 0 30px;
   transition: 0.5s;
+  /*background: linear-gradient(45deg, #ffffff, #f09f43);*/
+  background: #ffffff;
 }
 
 .navbar.top {
-  background: transparent;
+  /* background: transparent; */
   z-index: 11;
 }
 
 .navbar a {
-  color: #fff;
+  color: #23b4ff;
   padding: 10px 20px;
   margin: 0 5px;
   font-weight: 200;
+  font-size: 20px;
 }
 
 .navbar a:hover {
@@ -87,16 +90,64 @@ img {
 
 .navbar .logo {
   font-weight: 400;
-  margin-right: 50px;
+  /* margin-right: 50px; */
+}
+
+.navbar.top {
+  /* background: transparent; */
+  z-index: 11;
+}
+
+/* navbar */
+.infobar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #333; */
+  /* background: linear-gradient(to right, #8196d9, #6680b3, #5c78cf); */
+  /* background: #8196d9; */
+  color: #ffffff;
+  /* opacity: 0.8; */
+  width: 100%;
+  height: 40px;
+  position: static;
+  /* top: 0; */
+  padding: 0 30px;
+  transition: 0.5s;
+  /*background: linear-gradient(45deg, #ffffff, #f09f43);*/
+  background: #23b4ff;
+}
+
+.infobar a {
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.infobar a:hover {
+  border-bottom: #da544a 4px solid;
+}
+
+.infobar a.active {
+  font-weight: bold;
+  font-style: normal;
+  border-bottom: #da544a 4px solid;
+}
+
+.infobar ul {
+  display: flex;
 }
 
 /* Header of Jumbotron */
 .hero {
-  background: url('../images/asset/Earth.png') no-repeat center center/contain,
-    linear-gradient(to right, #8196d9, #6680b3, #5c78cf);
+  background: url('../images/asset/kopi-bg-yellow.jpg') no-repeat center
+    center/auto;
   height: 100vh;
   position: relative;
   color: #fff;
+  background: linear-gradient(45deg, #f9d450, #f09f43);
 }
 
 /* positioning on center (flex column for all items) */
@@ -117,7 +168,8 @@ img {
 .hero .content p {
   font-size: 20px;
   max-width: 600px;
-  margin: 50px 0 30px;
+  margin: 0px 0 30px;
+  text-shadow: 2px 2px #000000;
 }
 
 /* psudeo class for Overlay */

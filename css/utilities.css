@@ -20,7 +20,8 @@
   color: #fff;
   background-color: #28a745;
   border: none;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
 }
 
 /* effect */
