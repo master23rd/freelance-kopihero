@@ -188,12 +188,32 @@
   flex-basis: 200px;
 }
 
+.item.kopi {
+  color: #333;
+  background: #f4f4f4;
+  border: none;
+  margin: 10px 50px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 10px;
+  /* max-width: 200px; */
+  /* width: 250px; */
+  flex: 1;
+  flex-basis: 200px;
+}
+
 .item-card {
   height: 300px;
 }
 
 .item-header {
   padding: 10px;
+}
+
+.item-header.kopi {
+  padding: 30px;
+  margin-top: 280px;
+  text-align: center;
 }
 
 .item-title {
@@ -204,6 +224,15 @@
 .flex-container img {
   width: 20%;
   height: 100%;
+}
+
+.flex-container img.kopi {
+  transform: rotate(1deg);
+  width: 25%;
+  top: 1170px;
+  position: absolute;
+  height: 50%;
+  left: 80px;
 }
 
 .flex-container .item-card .btn {
