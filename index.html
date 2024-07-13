@@ -33,7 +33,7 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+        background: none;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -48,7 +48,7 @@
 
       /* // Alternative way to add offset on first slide  */
       .mySwiper .swiper-wrapper .swiper-slide:first-child {
-        margin-left: -300px;
+        /* margin-left: -500px; */
       }
 
       .card-sliders .swiper-button-prev,
@@ -58,13 +58,14 @@
       }
 
       .card-sliders-navigation {
-        margin-top: 10rem;
+        margin-top: 1rem;
         display: flex;
         gap: 1rem;
+        justify-content: center;
       }
 
       .swiper-wrapper {
-        margin-top: 5rem;
+        margin-top: 3rem;
       }
       .swiper-pagination-bullets {
         display: none;
@@ -104,12 +105,12 @@
     <title>Kopi Hero</title>
   </head>
   <body id="home">
-    <div id="infobar" class="infobar">
+    <div id="infobar" class="infobar top" style="z-index: 20">
       <!-- navigation (rightside)-->
       <nav>
         <ul>
-          <li><a href="#home" class="active">About Us</a></li>
-          <li><a href="#testimony">Work at Kopi</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="career.html">Work at Kopi</a></li>
         </ul>
       </nav>
     </div>
@@ -118,25 +119,29 @@
       <!-- navigation (rightside)-->
       <nav>
         <ul>
-          <li><a href="#home" class="active">Menu</a></li>
-          <li><a href="#testimony">Find Us</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="findus.html">Find Us</a></li>
         </ul>
       </nav>
       <!-- logo section (left side)-->
-      <h3 class="logo">
+      <a
+        href="index.html"
+        class="logo"
+        style="cursor: pointer; margin: 0px; padding: 0px"
+      >
         <span class="text-primary">
           <!-- <i class="fas fa-book-open"></i> -->
           <img
             src="./images/asset/kopi-nobg.png"
             alt=""
-            style="width: 250px; padding-top: 80px"
+            style="width: 250px; padding-top: 60px"
           />
         </span>
-      </h3>
+      </a>
       <nav>
         <ul>
-          <li><a href="#home">Offers</a></li>
-          <li><a href="#testimony">Contact</a></li>
+          <li><a href="offer.html">Offers</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -180,14 +185,7 @@
       </div>
     </header>
     <main>
-      <!-- podcast -->
-      <section id="podcast" class="subsection flex-columns">
-        <div class="column podcast-content">
-          <img src="./images/asset/kopi_banner.png" alt="" />
-        </div>
-      </section>
       <!-- Category -->
-      <!-- <section id="testimony" class="subsection bg-half"> -->
       <section id="testimony" class="subsection">
         <!-- about -->
         <div class="flex-items">
@@ -196,23 +194,81 @@
               src="./images/asset/Putih - Submark 2.png"
               alt=""
               style="width: 40px; margin-right: 10px"
-            />Choose Your Heroes!
+            />Choose Your Heroes
           </h1>
         </div>
+
         <div class="flex-container" style="margin-top: 50px">
           <div class="item kopi item-card">
             <div class="row item-header kopi">
+              <img src="./images/asset/kopi_drink1.png" class="kopi" alt="" />
               <img
                 src="./images/asset/kopi_drink1.png"
-                class="kopi"
-                style="left: 130px"
+                class="kopi-show"
                 alt=""
               />
-              <h1>Coffee</h1>
-              <p>Taste of Happiness</p>
+              <div
+                style="
+                  position: absolute;
+                  z-index: 8;
+                  top: 60%;
+                  right: 25%;
+                  color: white;
+                  text-shadow: 2px 2px #000000;
+                "
+              >
+                <h1>Coffee</h1>
+                <p>Taste of Happiness</p>
+              </div>
             </div>
           </div>
-          <div class="item kopi item-card">
+          <div class="item kopi item-card" id="milk">
+            <div class="row item-header kopi">
+              <img src="./images/asset/kopi_drink1.png" class="kopi" alt="" />
+              <img
+                src="./images/asset/kopi_drink1.png"
+                class="kopi-show"
+                alt=""
+              />
+              <div
+                style="
+                  position: absolute;
+                  z-index: 8;
+                  top: 60%;
+                  right: 25%;
+                  color: white;
+                  text-shadow: 2px 2px #000000;
+                "
+              >
+                <h1>Milk Tea</h1>
+                <p>Taste of Happiness</p>
+              </div>
+            </div>
+          </div>
+          <div class="item kopi item-card" id="catering">
+            <div class="row item-header kopi">
+              <img src="./images/asset/kopi_drink1.png" class="kopi" alt="" />
+              <img
+                src="./images/asset/kopi_drink1.png"
+                class="kopi-show"
+                alt=""
+              />
+              <div
+                style="
+                  position: absolute;
+                  z-index: 8;
+                  top: 60%;
+                  right: 25%;
+                  color: white;
+                  text-shadow: 2px 2px #000000;
+                "
+              >
+                <h1>Catering</h1>
+                <p>Taste of Happiness</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="item kopi item-card">
             <div class="row item-header kopi">
               <img
                 src="./images/asset/kopi_drink1.png"
@@ -235,89 +291,400 @@
               <h1>Catering</h1>
               <p>Taste of Happiness</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
-      <!-- Intro Menu & Package -->
+      <!-- Banner -->
+      <section id="podcast" class="subsection flex-columns">
+        <div class="column podcast-content">
+          <img src="./images/asset/kopi_banner.png" alt="" />
+        </div>
+      </section>
+      <!-- Popular Menu -->
       <div
         class="flex-items card-sliders"
         style="
           background: linear-gradient(45deg, #f9d450, #f09f43);
-          margin-top: 100px;
+          /* margin-top: 100px; */
         "
       >
-        <div #swiperRef="" class="swiper mySwiper">
+        <div #swiperRef="" class="swiper mySwiper-menu">
           <!-- arrows -->
           <div class="card-sliders-navigation">
+            <h1>
+              <img
+                src="./images/asset/Warna - Submark 3.png"
+                alt=""
+                style="width: 40px; margin-right: 10px"
+              />Popular Choice
+            </h1>
             <!-- Click me!, I am suppose to traverse one (1) card at a time -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
           </div>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" style="background: none">
                 <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
                   class="content"
-                  style="text-align: center; border-radius: 100%"
+                  style="
+                    text-align: center;
+                    border-radius: 100%;
+                    background: none;
+                  "
                 >
                   <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" style="background: none">
                 <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
                   class="content"
-                  style="text-align: center; border-radius: 100%"
+                  style="
+                    text-align: center;
+                    border-radius: 100%;
+                    background: none;
+                  "
                 >
                   <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" style="background: none">
                 <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
                   class="content"
-                  style="text-align: center; border-radius: 100%"
+                  style="
+                    text-align: center;
+                    border-radius: 100%;
+                    background: none;
+                  "
                 >
                   <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" style="background: none">
                 <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
                   class="content"
-                  style="text-align: center; border-radius: 100%"
+                  style="
+                    text-align: center;
+                    border-radius: 100%;
+                    background: none;
+                  "
                 >
                   <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" style="background: none">
                 <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
                   class="content"
-                  style="text-align: center; border-radius: 100%"
+                  style="
+                    text-align: center;
+                    border-radius: 100%;
+                    background: none;
+                  "
                 >
                   <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" style="background: none">
                 <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
                   class="content"
-                  style="text-align: center; border-radius: 100%"
+                  style="
+                    text-align: center;
+                    border-radius: 100%;
+                    background: none;
+                  "
                 >
                   <h3>Blue Steel</h3>
                 </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="btn btn-primary"
+            style="
+              background: #23b4ff;
+              color: #fff;
+              width: auto;
+              font-size: 20px;
+              /* box-shadow: none; */
+              /* border: black 1px solid; */
+              /* border-radius: 10px; */
+            "
+          >
+            <i class="fas fa-chevron"></i> Find More
+          </a>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+      <!-- Detail Section & Map -->
+      <section
+        class="program flex-columns"
+        style="margin-top: 0px; padding: 0px"
+      >
+        <div class="program-content column">
+          <div
+            class="row"
+            style="
+              padding: 50px 100px;
+              background: #23b4ff;
+              /* border-radius: 50px; */
+              /* margin-bottom: 50px; */
+            "
+          >
+            <div class="column">
+              <div class="column-1" style="padding: 50px">
+                <h1>Know Your Taste</h1>
+                <p style="font-size: 20px">
+                  Let us take care of your coffee needs, while you enjoy your
+                  day.
+                </p>
+                <div class="row pad-0 premium-btn">
+                  <!-- <a href="#" class="btn btn-outline"> -->
+                  <a href="#" class="btn btn-secondary">
+                    <i class="fas fa-chevron"></i> Find Menu
+                  </a>
+                  <a href="#" class="btn btn-secondary">
+                    <i class="fas fa-chevron"></i> See offering
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="flex-container">
+                <div
+                  class="item item-card"
+                  style="border: none; background: none; height: auto"
+                >
+                  <img
+                    src="./images/asset/bg1.png"
+                    style="width: 100%"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="
+              padding: 50px 100px;
+              background: none;
+              /* border-radius: 50px; */
+              /* margin-bottom: 50px; */
+              color: black;
+            "
+          >
+            <div class="column">
+              <div class="flex-container">
+                <div
+                  class="item item-card"
+                  style="border: none; background: none; height: auto"
+                >
+                  <img
+                    src="./images/asset/bg1.png"
+                    style="width: 100%"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="column-1" style="padding: 50px">
+                <h1>Celebrate Your Event</h1>
+                <p style="font-size: 20px">
+                  We Offer a range of packages to suit your event sizes and
+                  needs. Do you want to bulk order ? Just contact us
+                </p>
+                <div class="row pad-0 premium-btn">
+                  <!-- <a href="#" class="btn btn-outline"> -->
+                  <a href="#" class="btn btn-primary">
+                    <i class="fas fa-chevron"></i> Contact Us</a
+                  >
+                  <!-- <a href="#" class="btn">
+                    <i class="fas fa-chevron"></i> Link Coaching >
+                  </a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="
+              padding: 50px 100px;
+              background: url('images/asset/kopi_map.jpg');
+              /* border-radius: 50px; */
+              /* margin-bottom: 50px; */
+              position: relative;
+              height: 380px;
+            "
+          >
+            <div
+              class="column bg-light"
+              style="
+                padding: 30px 10px;
+                text-align: center;
+                width: 50%;
+                position: absolute;
+                top: 100px;
+                left: 350px;
+              "
+            >
+              <h2>Find Our Store</h2>
+              <form
+                action=""
+                class="callback-form"
+                style="
+                  width: 50%;
+                  padding: 0px;
+                  display: block;
+                  margin: 0 auto;
+                  background: #fff;
+                  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+                "
+              >
+                <div class="form-control" style="margin-bottom: 0px">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter City"
+                    style="
+                      float: left;
+                      /* border-radius: 95% 4% 92% 5%/4% 95% 6% 95%; */
+                    "
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value=""
+                  id="submit"
+                  class="btn btn-primary"
+                  style="
+                    float: left;
+                    margin-top: 0px;
+                    /* border-radius: 95% 4% 92% 5%/4% 95% 6% 95%; */
+                  "
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Social Media -->
+      <div
+        class="flex-items card-sliders"
+        style="
+          /* background: linear-gradient(45deg, #23b4ff, #5c78cf); */
+          margin-top: 0px;
+          color: black;
+        "
+      >
+        <div #swiperRef="" class="swiper mySwiper-socmed" style="color: white">
+          <!-- arrows -->
+          <div
+            class="card-sliders-navigation"
+            style="justify-content: space-between; color: black"
+          >
+            <h1>Follow Our Social</h1>
+            <!-- Click me!, I am suppose to traverse one (1) card at a time -->
+            <div style="display: flex">
+              <div
+                class="swiper-button-prev"
+                style="
+                  color: black;
+                  margin-right: 20px;
+                  color: black;
+                  border: #ffdc15 1px solid;
+                  background: #ffdc15;
+                  padding: 30px;
+                  border-radius: 50%;
+                  --swiper-navigation-size: 20px;
+                "
+              ></div>
+              <div
+                class="swiper-button-next"
+                style="
+                  color: black;
+                  border: #ffdc15 1px solid;
+                  background: #ffdc15;
+                  padding: 30px;
+                  border-radius: 50%;
+                  --swiper-navigation-size: 20px;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card" style="background: #f4f4f4">
+                <img
+                  src="https://cdn.sanity.io/images/0z8flqaa/production/32630555b6dc098c0a3ed48eb1be3ca843a84008-603x828.png?fm=webp"
+                  alt=""
+                  style="border-radius: 0px"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="background: #f4f4f4">
+                <img
+                  src="https://cdn.sanity.io/images/0z8flqaa/production/32630555b6dc098c0a3ed48eb1be3ca843a84008-603x828.png?fm=webp"
+                  alt=""
+                  style="border-radius: 0px"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="background: #f4f4f4">
+                <img
+                  src="https://cdn.sanity.io/images/0z8flqaa/production/32630555b6dc098c0a3ed48eb1be3ca843a84008-603x828.png?fm=webp"
+                  alt=""
+                  style="border-radius: 0px"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="background: #f4f4f4">
+                <img
+                  src="https://cdn.sanity.io/images/0z8flqaa/production/32630555b6dc098c0a3ed48eb1be3ca843a84008-603x828.png?fm=webp"
+                  alt=""
+                  style="border-radius: 0px"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="background: #f4f4f4">
+                <img
+                  src="https://cdn.sanity.io/images/0z8flqaa/production/32630555b6dc098c0a3ed48eb1be3ca843a84008-603x828.png?fm=webp"
+                  alt=""
+                  style="border-radius: 0px"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" style="background: #f4f4f4">
+                <img
+                  src="https://cdn.sanity.io/images/0z8flqaa/production/32630555b6dc098c0a3ed48eb1be3ca843a84008-603x828.png?fm=webp"
+                  alt=""
+                  style="border-radius: 0px"
+                />
               </div>
             </div>
           </div>
@@ -325,7 +692,6 @@
           <div class="swiper-button-prev"></div> -->
           <!-- <div class="swiper-pagination"></div> -->
         </div>
-        <div class="container"></div>
       </div>
     </main>
     <footer class="footer bg-primary" id="footer">
@@ -396,6 +762,7 @@
       window.onscroll = function () {
         if (window.pageYOffset > 100) {
           navbar.classList.remove('top')
+          infobar.classList.remove('top')
           if (!scrolled) {
             navbar.style.transform = 'translateY(-70px)'
           }
@@ -406,6 +773,7 @@
           }, 200)
         } else {
           navbar.classList.add('top')
+          infobar.classList.add('top')
           scrolled = false
         }
       }
@@ -421,15 +789,31 @@
             {
               scrollTop: $(hash).offset().top - 100,
             },
-            800
+            1000
           )
         }
       })
 
       //swiper
-      var swiper = new Swiper('.mySwiper', {
+      var swiper = new Swiper('.mySwiper-menu', {
         slidesPerView: 5,
-        centeredSlides: true,
+        // centeredSlides: true,
+        // centerInsufficientSlides: true,
+        // slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          // type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
+
+      var swiper = new Swiper('.mySwiper-socmed', {
+        slidesPerView: 4,
+        // centeredSlides: true,
         // centerInsufficientSlides: true,
         // slidesPerView: 3,
         spaceBetween: 30,
