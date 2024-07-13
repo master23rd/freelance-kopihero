@@ -14,7 +14,94 @@
     <link rel="stylesheet" href="css/lightbox.min.css" />
     <link rel="stylesheet" href="css/utilities.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Satusks.id</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .container {
+        max-width: 1280px;
+        /* margin: 0 auto; */
+        /* overflow: visible; */
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* // Alternative way to add offset on first slide  */
+      .mySwiper .swiper-wrapper .swiper-slide:first-child {
+        margin-left: -300px;
+      }
+
+      .card-sliders .swiper-button-prev,
+      .card-sliders .swiper-button-next {
+        position: unset;
+        margin: 0;
+      }
+
+      .card-sliders-navigation {
+        margin-top: 10rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .swiper-wrapper {
+        margin-top: 5rem;
+      }
+      .swiper-pagination-bullets {
+        display: none;
+      }
+
+      /* style2 */
+      /* .card-sliders .swiper-button-prev,
+      .card-sliders .swiper-button-next {
+        position: unset;
+        margin: 0;
+      }
+
+      .card-sliders-navigation {
+        margin-top: 10rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .swiper {
+        overflow: visible;
+      }
+
+      .swiper-wrapper {
+        margin-top: 5rem;
+      }
+
+      .swiper-slide {
+        padding: 1rem;
+        width: 384px;
+        color: white;
+        letter-spacing: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+      } */
+    </style>
+
+    <title>Kopi Hero</title>
   </head>
   <body id="home">
     <div id="infobar" class="infobar">
@@ -78,16 +165,15 @@
                 Lychee Yakult, and Mango Yakult—each one is a party in a glass!
                 🎊
               </p>
-              <a href="scorecard.html" class="btn btn-primary">
-                <i class="fas fa-chevron"></i> Find Menu >
-              </a>
-              <a
-                href="scorecard.html"
-                class="btn btn-primary"
-                style="margin-top: 10px"
-              >
-                <i class="fas fa-chevron"></i> Find Us >
-              </a>
+              <div class="row pad-0 premium-btn">
+                <!-- <a href="#" class="btn btn-outline"> -->
+                <a href="#" class="btn btn-primary">
+                  <i class="fas fa-chevron"></i> Find Menu
+                </a>
+                <a href="#" class="btn btn-primary">
+                  <i class="fas fa-chevron"></i> See offering
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -100,7 +186,7 @@
           <img src="./images/asset/kopi_banner.png" alt="" />
         </div>
       </section>
-      <!-- testimony -->
+      <!-- Category -->
       <!-- <section id="testimony" class="subsection bg-half"> -->
       <section id="testimony" class="subsection">
         <!-- about -->
@@ -134,7 +220,7 @@
                 style="left: 540px"
                 alt=""
               />
-              <h1>Coffee</h1>
+              <h1>Milk Tea</h1>
               <p>Taste of Happiness</p>
             </div>
           </div>
@@ -146,380 +232,143 @@
                 style="left: 950px"
                 alt=""
               />
-              <h1>Coffee</h1>
+              <h1>Catering</h1>
               <p>Taste of Happiness</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- programs -->
-      <section
-        id="program"
-        class="program flex-columns"
-        style="margin-top: 100px"
+      <!-- Intro Menu & Package -->
+      <div
+        class="flex-items card-sliders"
+        style="
+          background: linear-gradient(45deg, #f9d450, #f09f43);
+          margin-top: 100px;
+        "
       >
-        <div class="program-content column bg-primary">
-          <div class="row" style="padding: 50px 100px">
-            <div class="column">
-              <div class="column-1" style="padding: 50px">
-                <h1 style="font-size: 30px">We Save Your Day</h1>
-                <p style="font-size: 20px">
-                  Let us take care of your coffee needs, while you enjoy your
-                  day.
-                </p>
-                <div class="row pad-0 premium-btn">
-                  <!-- <a href="#" class="btn btn-outline"> -->
-                  <a href="#" class="btn">
-                    <i class="fas fa-chevron"></i> Menu
-                  </a>
-                  <a href="#" class="btn">
-                    <i class="fas fa-chevron"></i> See offering
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="flex-container">
+        <div #swiperRef="" class="swiper mySwiper">
+          <!-- arrows -->
+          <div class="card-sliders-navigation">
+            <!-- Click me!, I am suppose to traverse one (1) card at a time -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
-                  class="item item-card"
-                  style="
-                    border: none;
-                    background: linear-gradient(45deg, #f9d450, #f09f43);
-                    height: auto;
-                  "
+                  class="content"
+                  style="text-align: center; border-radius: 100%"
                 >
-                  <img
-                    src="./images/asset/bg1.png"
-                    style="width: 100%"
-                    alt=""
-                  />
+                  <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row" style="padding: 50px 100px">
-            <div class="column">
-              <div class="flex-container">
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/asset/kopi_drink1.png" alt="" />
                 <div
-                  class="item item-card"
-                  style="
-                    border: none;
-                    background: linear-gradient(45deg, #f9d450, #f09f43);
-                    height: auto;
-                  "
+                  class="content"
+                  style="text-align: center; border-radius: 100%"
                 >
-                  <img
-                    src="./images/asset/bg1.png"
-                    style="width: 100%"
-                    alt=""
-                  />
+                  <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
-            <div class="column">
-              <div class="column-1" style="padding: 50px">
-                <h1 style="font-size: 30px">Celebrate Your Event</h1>
-                <p style="font-size: 20px">
-                  We Offer a range of packages to suit your event sizes and
-                  needs. Do you want to bulk order ? Just contact us
-                </p>
-                <div class="row pad-0 premium-btn">
-                  <!-- <a href="#" class="btn btn-outline"> -->
-                  <a href="#" class="btn">
-                    <i class="fas fa-chevron"></i> Link Workshop >
-                  </a>
-                  <a href="#" class="btn">
-                    <i class="fas fa-chevron"></i> Link Coaching >
-                  </a>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/asset/kopi_drink1.png" alt="" />
+                <div
+                  class="content"
+                  style="text-align: center; border-radius: 100%"
+                >
+                  <h3>Blue Steel</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/asset/kopi_drink1.png" alt="" />
+                <div
+                  class="content"
+                  style="text-align: center; border-radius: 100%"
+                >
+                  <h3>Blue Steel</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/asset/kopi_drink1.png" alt="" />
+                <div
+                  class="content"
+                  style="text-align: center; border-radius: 100%"
+                >
+                  <h3>Blue Steel</h3>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./images/asset/kopi_drink1.png" alt="" />
+                <div
+                  class="content"
+                  style="text-align: center; border-radius: 100%"
+                >
+                  <h3>Blue Steel</h3>
                 </div>
               </div>
             </div>
           </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
         </div>
-      </section>
-      <!-- galery -->
-      <section id="galery" class="galery flex-grid section-padding">
-        <header class="section-header">
-          <!-- <h4>Galeri</h4>
-          <h2>Galeri</h2> -->
-          <h1>
-            <img
-              src="./images/asset/Warna - Submark 3.png"
-              alt=""
-              style="width: 40px; margin-right: 10px"
-            />Galeri
-          </h1>
-          <!-- <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
-            atque.
-          </p> -->
-        </header>
-        <div class="row">
-          <div class="main-column">
-            <!-- <img src="images/cases/cases2.jpg" alt="" /> -->
-            <iframe
-              width="98%"
-              height="415"
-              src="https://www.youtube.com/embed/aPFuXz68uxk?si=zVyGh-enGui2zw43"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-              style="border-radius: 20px"
-            ></iframe>
-          </div>
-          <div class="column">
-            <a
-              href="images/cases/cases3.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases3.jpg" alt="" />
-            </a>
-            <a
-              href="images/cases/cases4.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases4.jpg" alt="" />
-            </a>
-            <a
-              href="images/cases/cases4.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases4.jpg" alt="" />
-            </a>
-          </div>
-          <div class="column">
-            <a
-              href="images/cases/cases5.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases5.jpg" alt="" />
-            </a>
-            <a
-              href="images/cases/cases6.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases6.jpg" alt="" />
-            </a>
-            <a
-              href="images/cases/cases6.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases6.jpg" alt="" />
-            </a>
-          </div>
-          <div class="column">
-            <a
-              href="images/cases/cases7.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases7.jpg" alt="" />
-            </a>
-            <a
-              href="images/cases/cases8.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases8.jpg" alt="" />
-            </a>
-            <a
-              href="images/cases/cases8.jpg"
-              data-lightbox="cases"
-              data-title="testing"
-              alt=""
-            >
-              <img src="images/cases/cases8.jpg" alt="" />
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- article -->
-      <section id="article" class="article section-padding bg-half-reversed">
-        <header class="section-header">
-          <h1>
-            <img
-              src="./images/asset/Warna - Submark 3.png"
-              alt=""
-              style="width: 40px; margin-right: 10px"
-            />Artikel
-          </h1>
-        </header>
-        <div class="flex-items">
-          <div class="card">
-            <img src="images/cases/cases1.jpg" alt="" />
-            <div class="content">
-              <h2>Judul Artikel</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                eu nunc in justo tempus varius. Pellentesque id ultricies ex...
-              </p>
-              <a href="post.html" class="btn-highlight-nonoutline">
-                Read More >
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/cases/cases1.jpg" alt="" />
-            <div class="content">
-              <h2>Judul Artikel</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                eu nunc in justo tempus varius. Pellentesque id ultricies ex...
-              </p>
-              <a href="post.html" class="btn-highlight-nonoutline">
-                Read More >
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/cases/cases1.jpg" alt="" />
-            <div class="content">
-              <h2>Judul Artikel</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                eu nunc in justo tempus varius. Pellentesque id ultricies ex...
-              </p>
-              <a href="post.html" class="btn-highlight-nonoutline">
-                Read More >
-              </a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/cases/cases1.jpg" alt="" />
-            <div class="content">
-              <h2>Judul Artikel</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                eu nunc in justo tempus varius. Pellentesque id ultricies ex...
-              </p>
-              <a href="post.html" class="btn-highlight-nonoutline">
-                Read More >
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- message -->
-      <section
-        id="subscribe"
-        class="subscribe flex-columns flex-reverse bg-primary"
-      >
-        <div class="row-nopadding">
-          <div class="column">
-            <div class="column-1-nopadding">
-              <img src="images/asset/Group 783.png" alt="" />
-            </div>
-          </div>
-          <div class="column">
-            <div class="column-2">
-              <img
-                src="images/asset/Group 782.png"
-                style="object-fit: contain"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- contact -->
-      <!-- <section id="contact" class="contact flex-columns">
-        <div class="row">
-          <div class="column">
-            <div class="column-1">
-              <img src="images/home/contact.jpg" alt="" />
-            </div>
-          </div>
-          <div class="column">
-            <div class="column-2 bg-light">
-              <h2>Request Callback</h2>
-              <form action="" class="callback-form">
-                <div class="form-control">
-                  <label for="name"></label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="enter name"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="email"></label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="enter email"
-                  />
-                </div>
-                <div class="form-control">
-                  <label for="phone"></label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="phone"
-                    placeholder="enter phone"
-                  />
-                </div>
-                <input type="submit" value="send" id="submit" class="btn" />
-              </form>
-            </div>
-          </div>
-        </div>
-      </section> -->
+        <div class="container"></div>
+      </div>
     </main>
     <footer class="footer bg-primary" id="footer">
       <div class="row">
+        <div class="column column-3">
+          <!-- <h3>satusks.id</h3> -->
+          <img src="./images/asset/kopi-nobg.png" alt="" style="width: 250px" />
+          <p>Copyright &copy; 2024 - kopihero.co.id</p>
+        </div>
         <div class="column column-1">
-          <h3>Solutions</h3>
+          <h3>Explore</h3>
           <nav>
             <ul>
-              <li><a href="#home" class="active">Campus Academy</a></li>
-              <li><a href="#testimony">Career Seminar</a></li>
-              <li><a href="#testimony">Parent Meeting</a></li>
+              <li><a href="#home" class="active">Menu</a></li>
+              <li><a href="#">What's New</a></li>
+              <li><a href="#">News</a></li>
             </ul>
           </nav>
         </div>
         <div class="column column-2">
-          <h3>Explore</h3>
+          <h3>Company</h3>
           <nav>
             <ul>
-              <li><a href="#galery">Scorecard</a></li>
-              <li><a href="scorecard.html">Zoom Schedule</a></li>
-              <li><a href="#contact">Coaching</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Work at Kopi</a></li>
+              <li><a href="#">Terms & Condition</a></li>
             </ul>
           </nav>
         </div>
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
-        <div class="column column-3">
-          <h3>satusks.id</h3>
-          <nav>
-            <ul>
-              <li><a href="#home" class="active">Jesica</a></li>
-              <li><a href="#testimony"> +62 895 3391 41000</a></li>
-            </ul>
-          </nav>
-
-          <p>Copyright &copy; 2023 - Satusks.id</p>
+        <div class="column">
+          <div class="social">
+            <p>Contact Us</p>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+          </div>
         </div>
       </div>
-      <div class="row contact-us">
+      <!-- <div class="row contact-us">
         <div class="social">
           <p>Contact Us</p>
           <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
@@ -530,13 +379,14 @@
         <div class="barcode">
           <img src="./images/asset/barcode.png" alt="" />
         </div>
-      </div>
+      </div> -->
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/lightbox.min.js"></script>
     <!--   -->
     <script>
@@ -575,6 +425,48 @@
           )
         }
       })
+
+      //swiper
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 5,
+        centeredSlides: true,
+        // centerInsufficientSlides: true,
+        // slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          // type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
+
+      // const cardSliders = [...document.querySelectorAll('.card-sliders')]
+
+      // if (cardSliders.length > 0) {
+      //   cardSliders.forEach((element) => {
+      //     const fraction = element.querySelector('.fraction')
+      //     const swiper = new Swiper(element.querySelector('.swiper'), {
+      //       navigation: {
+      //         nextEl: '.swiper-button-next',
+      //         prevEl: '.swiper-button-prev',
+      //         disabledClass: '--disabled',
+      //       },
+      //       centerInsufficientSlides: true,
+      //       slidesPerView: 'auto',
+      //       spaceBetween: 28,
+      //     })
+      //     fraction.innerHTML = `${swiper.activeIndex + 1} / ${
+      //       swiper.slides.length
+      //     }`
+
+      //     swiper.on('slideChange', (sw) => {
+      //       fraction.innerHTML = `${sw.activeIndex + 1} / ${sw.slides.length}`
+      //     })
+      //   })
+      // }
     </script>
   </body>
 </html>

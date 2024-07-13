@@ -1,6 +1,15 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&family=Open+Sans:wght@300;400&family=Roboto:wght@100&display=swap');
 
+@font-face {
+  font-family: 'CustomFont'; /* Name your font family */
+  src: url('./FONTBADABOOM.TTF'); /* Locate the .ttf file within your directory*/
+}
+
+body {
+  font-family: 'CustomFont', sans-serif; /* Use the font family */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,7 +17,7 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'CustomFont', 'DM Sans', sans-serif;
   /* background: #fff; */
   /* color: #333; */
   line-height: 1.6;
@@ -59,6 +68,8 @@ img {
   transition: 0.5s;
   /*background: linear-gradient(45deg, #ffffff, #f09f43);*/
   background: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  box-shadow: -3px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar.top {
@@ -76,6 +87,10 @@ img {
 
 .navbar a:hover {
   border-bottom: #da544a 4px solid;
+}
+
+.navbar a.logo:hover {
+  border-bottom: none;
 }
 
 .navbar a.active {
@@ -99,23 +114,32 @@ img {
 }
 
 /* navbar */
-.infobar {
+.infobar.top {
   display: flex;
   align-items: center;
   justify-content: center;
   /* background-color: #333; */
   /* background: linear-gradient(to right, #8196d9, #6680b3, #5c78cf); */
   /* background: #8196d9; */
-  color: #ffffff;
+  /* color: #ffffff; */
   /* opacity: 0.8; */
   width: 100%;
   height: 40px;
-  position: static;
+  /* position: static; */
+  position: relative;
   /* top: 0; */
   padding: 0 30px;
   transition: 0.5s;
   /*background: linear-gradient(45deg, #ffffff, #f09f43);*/
   background: #23b4ff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.infobar {
+  position: absolute;
+  /* background: #23b4ff; */
+  /* position: relative; */
+  /* font-family: 'DM Sans', sans-serif; */
 }
 
 .infobar a {
@@ -127,13 +151,13 @@ img {
 }
 
 .infobar a:hover {
-  border-bottom: #da544a 4px solid;
+  /* border-bottom: #da544a 4px solid; */
 }
 
 .infobar a.active {
   font-weight: bold;
   font-style: normal;
-  border-bottom: #da544a 4px solid;
+  /* border-bottom: #da544a 4px solid; */
 }
 
 .infobar ul {
@@ -147,7 +171,7 @@ img {
   height: 100vh;
   position: relative;
   color: #fff;
-  background: linear-gradient(45deg, #f9d450, #f09f43);
+  /* background: linear-gradient(45deg, #f9d450, #f09f43); */
 }
 
 /* positioning on center (flex column for all items) */
@@ -166,7 +190,8 @@ img {
 }
 
 .hero .content p {
-  font-size: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 25px; /*20px*/
   max-width: 600px;
   margin: 0px 0 30px;
   text-shadow: 2px 2px #000000;
@@ -209,11 +234,12 @@ img {
   text-align: center;
   justify-content: center;
   align-items: center;
+  position: relative;
   /* height: 100%; */
 }
 
 .flex-items > div {
-  /* padding: 20px; */
+  padding: 20px;
   /* border: 1px solid; */
   border-radius: 5%;
   margin: 10px;
@@ -221,7 +247,8 @@ img {
 
 .flex-items .card {
   background: #fff;
-  border: #d3d3d3 1px solid;
+  /* border: #d3d3d3 1px solid; */
+  /* background: #f4f4f4; */
 }
 
 .flex-items .card img {
@@ -231,6 +258,7 @@ img {
 .flex-items .content {
   padding: 10px 30px;
   text-align: left;
+  background: #ffffff;
 }
 
 /* podcast  - old section*/
@@ -318,30 +346,39 @@ img {
 .callback-form input {
   /* width: 100%; */
   /* padding: 4px; */
-  width: 50%;
+  width: 80%;
   padding: 10px;
   height: 40px;
-  border: #f5f5f5 1px solid;
-  border-radius: 20px;
+  border: #da544a 1px solid;
+  /* border-radius: 20px; */
+  text-align: center;
 }
 
 .callback-form input.solid {
   /* width: 100%; */
   /* padding: 4px; */
-  width: 50%;
+  width: 80%;
   padding: 10px;
   height: 40px;
   border: #333 1px solid;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .callback-form input:focus {
-  outline-color: #da544a;
+  outline-color: none; /* #da544a;*/
 }
 
 .callback-form .btn {
   padding: 12px 0;
   margin-top: 20px;
+  font-size: 1rem;
+  padding: 12px 0;
+  margin-top: 20px;
+  font-size: revert-layer;
+  width: 20%;
+  background-image: url(' https://www.boostjuice.com.au/img/placeholders/icon_search_stores.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* blog */
@@ -418,6 +455,7 @@ img {
   justify-content: space-between; */
   text-align: left;
   padding: 50px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .footer .row {
@@ -441,7 +479,7 @@ img {
 
 .footer .contact-us {
   margin-top: 20px;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .footer .barcode {
